@@ -1,0 +1,17 @@
+package org.example.repository;
+
+import org.example.entity.Author;
+
+import java.util.List;
+
+public interface AuthorRepository {
+    String saveAuthor(Author author);
+   void updateAuthor(Long id,Author author);
+   Author getAuthorById(Long id);
+    List<Author> getAuthorsByPublisherId(Long id);
+    //(тиешелуу издательствонун авторлорун чыгарып беруу),
+   void deleteAuthorById(Long id);
+    //(автор очкондо, авторго тиешелуу издательство очпошу керек, китептер очуш керек), assignAuthorToPublisher()(авторду издательствого кошуп коюу(назначить)).
+
+
+}
